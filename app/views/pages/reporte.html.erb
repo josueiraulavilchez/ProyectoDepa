@@ -1,0 +1,195 @@
+<%=form_for :modelo, :html => { :method => :get, :class => "form-horizontal" } do |f| %>
+
+
+<div class="field">
+	<%= f.label :lista, "Proyecto" %>
+	<%= f.select :lista, [["Breña1", 1], ["Cercado3", 2], ["Miraflores2", 3], ["San Isidro1", 4], ["Surco4", 5]], { :include_blank => "Seleccionar"}, :class => "form-control" %>
+</div>
+ 
+<div class="field">
+		<%= f.submit "Generar Reporte", :class => "btn btn-primary" %>
+</div>
+  
+  <table class="table table-bordered">
+  <thead>
+    <tr  class="thead-dark">
+      <th scope="col", class="danger">Piso</th>
+      <th scope="col">Tipo A</th>
+      <th scope="col">Tipo B</th>
+      <th scope="col">Tipo C</th>
+      <th scope="col">Tipo D</th>
+      <th scope="col">Tipo E</th>
+      <th scope="col">Tipo F</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="danger">
+      <th scope="row">1</th>
+      <td>101</td>
+      <td>102</td>
+      <td>103</td>
+      <td>104</td>
+      <td>105</td>
+      <td>106</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td style="background-color: gray">201</td>
+      <td style="background-color: yellow">202</td>
+      <td>203</td>
+      <td style="background-color: gray">204</td>
+      <td style="background-color: gray">205</td>
+      <td>206</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td style="background-color: gray">301</td>
+      <td>302</td>
+      <td style="background-color: yellow">303</td>
+      <td>304</td>
+      <td>305</td>
+      <td style="background-color: gray">306</td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td>401</td>
+      <td>402</td>
+      <td style="background-color: gray">403</td>
+      <td>404</td>
+      <td style="background-color: gray">405</td>
+      <td>406</td>
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+      <td style="background-color: yellow">501</td>
+      <td>502</td>
+      <td style="background-color: gray">503</td>
+      <td>504</td>
+      <td style="background-color: gray">505</td>
+      <td style="background-color: gray">506</td>
+    </tr>
+    <tr>
+      <th scope="row">6</th>
+      <td style="background-color: gray">601</td>
+      <td style="background-color: yellow">602</td>
+      <td>603</td>
+      <td style="background-color: gray">604</td>
+      <td>605</td>
+      <td style="background-color: yellow">606</td>
+    </tr>
+    <tr>
+      <th scope="row">7</th>
+      <td>701</td>
+      <td>702</td>
+      <td>703</td>
+      <td style="background-color: yellow">704</td>
+      <td style="background-color: gray">705</td>
+      <td style="background-color: gray">706</td>
+    </tr>
+    <tr>
+      <th scope="row">8</th>
+      <td style="background-color: gray">801</td>
+      <td style="background-color: yellow">802</td>
+      <td style="background-color: gray">803</td>
+      <td>804</td>
+      <td style="background-color: gray">805</td>
+      <td>806</td>
+    </tr>
+    <tr>
+      <th scope="row">9</th>
+      <td style="background-color: gray">901</td>
+      <td style="background-color: yellow">902</td>
+      <td>903</td>
+      <td style="background-color: gray">904</td>
+      <td style="background-color: yellow">905</td>
+      <td style="background-color: gray">906</td>
+    </tr>
+    <tr>
+      <th scope="row">10</th>
+      <td>1001</td>
+      <td style="background-color: gray">1002</td>
+      <td>1003</td>
+      <td style="background-color: gray">1004</td>
+      <td>1005</td>
+      <td style="background-color: gray">1006</td>
+    </tr>
+    <tr>
+      <th scope="row">11</th>
+      <td>1101</td>
+      <td>1102</td>
+      <td>1103</td>
+      <td style="background-color: gray">1104</td>
+      <td>1105</td>
+      <td style="background-color: gray">1106</td>
+    </tr>
+    <tr>
+      <th scope="row">12</th>
+      <td style="background-color: gray">1201</td>
+      <td>1202</td>
+      <td style="background-color: yellow">1203</td>
+      <td style="background-color: yellow">1204</td>
+      <td>1205</td>
+      <td style="background-color: gray">1206</td>
+    </tr>
+	<tr>
+      <th scope="row">13</th>
+      <td style="background-color: gray">1301</td>
+      <td style="background-color: yellow">1302</td>
+      <td style="background-color: gray">1303</td>
+      <td>1304</td>
+      <td style="background-color: gray">1305</td>
+      <td style="background-color: yellow">1306</td>
+    </tr>
+  </tbody>
+</table>
+
+
+  <table class="table">
+  <thead>
+    <tr>
+    <th scope="col">Leyenda</th>
+      <th scope="col">Estado</th>
+      <th scope="col">Cantidad</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"></th>
+      <td>Disponible</td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <th scope="row" style="background-color: yellow"></th>
+      <td>Separado</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th scope="row" style="background-color: gray"></th>
+      <td>Vendido</td>
+      <td>35</td>
+    </tr>
+
+  </tbody>
+</table>
+
+ <table class="table">
+  <thead>
+    <tr>
+    <th scope="col">Estado</th>
+      <th scope="col">Monto Recaudaddo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Departamentos Separados</th>
+      <td>S/ 154'000.00</td>
+    </tr>
+    <tr>
+      <th scope="row">Departamentos Vendidos</th>
+      <td>S/ 10'500'000.00</td>
+    </tr>
+
+  </tbody>
+</table>
+
+<% end %>

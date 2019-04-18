@@ -1,0 +1,37 @@
+<%= form_with(model: proyect, local: true) do |form| %>
+  <% if proyect.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(proyect.errors.count, "error") %> prohibited this proyect from being saved:</h2>
+
+      <ul>
+      <% proyect.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name, "Nombre" %>
+    <%= form.text_field :name, id: :proyect_name, :class => "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :district, "Distrito" %>
+    <%= form.text_field :district, id: :proyect_district, :class => "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address, "Dirección" %>
+    <%= form.text_field :address, id: :proyect_address, :class => "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :m2price, "Precio base por metro cuadrado" %>
+    <%= form.text_field :m2price, id: :proyect_m2price, :class => "form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Crear Proyecto", :class => "btn btn-primary" %>
+  </div>
+<% end %>

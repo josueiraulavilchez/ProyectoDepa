@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombres:</strong>
+  <%= @customer.name %>
+</p>
+
+<p>
+  <strong>Apellidos:</strong>
+  <%= @customer.surname %>
+</p>
+
+<p>
+  <strong>DNI:</strong>
+  <%= @customer.dni %>
+</p>
+
+<p>
+  <strong>Correo Electrónico:</strong>
+  <%= @customer.mail %>
+</p>
+
+<p>
+  <strong>Teléfono:</strong>
+  <%= @customer.phone %>
+</p>
+
+<p>
+  <strong>Mensaje:</strong>
+  <%= @customer.message %>
+</p>
+
+<%= link_to 'Regresar', root_path %>

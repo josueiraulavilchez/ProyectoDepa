@@ -1,0 +1,32 @@
+<%= form_with(model: apart_type, local: true) do |form| %>
+  <% if apart_type.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(apart_type.errors.count, "error") %> prohibited this apart_type from being saved:</h2>
+
+      <ul>
+      <% apart_type.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name, "Nombre" %>
+    <%= form.text_field :name, id: :apart_type_name, :class => "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :area, "Area" %>
+    <%= form.text_field :area, id: :apart_type_area, :class => "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :floor, "Piso" %>
+    <%= form.number_field :floor, id: :apart_type_floor, :class => "form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Crear", :class => "btn btn-primary" %>
+  </div>
+<% end %>

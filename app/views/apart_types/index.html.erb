@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Apart Types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Area</th>
+      <th>Floor</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @apart_types.each do |apart_type| %>
+      <tr>
+        <td><%= apart_type.name %></td>
+        <td><%= apart_type.area %></td>
+        <td><%= apart_type.floor %></td>
+        <td><%= link_to 'Show', apart_type %></td>
+        <td><%= link_to 'Edit', edit_apart_type_path(apart_type) %></td>
+        <td><%= link_to 'Destroy', apart_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Apart Type', new_apart_type_path %>

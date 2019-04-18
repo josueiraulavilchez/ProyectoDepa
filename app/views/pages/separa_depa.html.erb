@@ -1,0 +1,72 @@
+<%=form_for :modelo, :html => { :method => :get, :class => "form-horizontal" } do |f| %>
+
+<div class="field">
+	<%= f.label :titulo, "Nombres" %>
+	<%= f.text_field :titulo, :class => "form-control" %>
+</div>
+
+<div class="field">
+	<%= f.label :titulo, "Apellidos" %>
+	<%= f.text_field :titulo, :class => "form-control" %>
+</div>
+
+<div class="field">	
+	<%= f.label :titulo, "DNI" %>
+	<%= f.text_field :titulo, :class => "form-control" %>
+</div>
+
+<div class="field">
+	<%= f.label :titulo, "Teléfono" %>
+	<%= f.text_field :titulo, :class => "form-control" %>
+</div>
+
+<div class="field">
+	<%= f.label :titulo, "Correo" %>
+	<%= f.text_field :titulo, :class => "form-control" %>
+</div>
+
+<div class="field">
+	<%= f.label :lista, "Proyecto" %>
+	<%= f.select :lista, [["Breña1", 1], ["Cercado3", 2], ["Miraflores2", 3], ["San Isidro1", 4], ["Surco4", 5]], { :include_blank => "Seleccionar"}, :class => "form-control" %>
+</div>
+
+
+<div>
+	<%= f.label :titulo, "N piso" %>
+	<%= f.text_field :titulo, :class => "form-control" %>
+</div>
+
+<div class="field">
+	<%= f.label :titulo, "N Departamento" %>
+	<%= f.text_field :titulo, :class => "form-control" %>
+</div>
+
+<div class="field">
+	<%= f.label :titulo, "fecha de deposito" %>
+	<%= f.text_field :titulo, :class => "form-control" %>
+</div>
+
+<div class="field">
+	<%= f.label :titulo, "monto" %>
+	<%= f.text_field :titulo, :class => "form-control" %>
+</div>
+
+<div class="field">
+<form class="md-form">
+  <div class="file-field">
+    <div class="btn btn-primary">
+      <span>Adjuntar copia de voucher</span>
+      <input type="file">
+    </div>
+    <div class="file-path-wrapper">
+      <input class="file-path validate" type="text" placeholder="Sube tu archivo">
+    </div>
+  </div>
+</form>
+</div>
+
+<div class="field">
+		<%= f.submit "Enviar datos", :class => "btn btn-primary" %>
+</div>
+
+<% end %>

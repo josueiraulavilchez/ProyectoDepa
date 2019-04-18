@@ -1,0 +1,58 @@
+<%= form_with(model: customer, local: true) do |form| %>
+  <% if customer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(customer.errors.count, "error") %> prohibited this customer from being saved:</h2>
+
+      <ul>
+      <% customer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name, "Nombre Completo" %>
+    <%= form.label :name, id: :customer_name, :class => "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :surname, "Apellidos" %>
+    <%= form.label :surname, id: :customer_surname, :class => "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dni, "DNI" %>
+    <%= form.label :dni, id: :customer_dni, :class => "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mail, "Correo Electrónico" %>
+    <%= form.label :mail, id: :customer_mail, :class => "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone, "Teléfono" %>
+    <%= form.label :phone, id: :customer_phone, :class => "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :message, "Mensaje" %>
+    <%= form.label :message, id: :customer_message, :class => "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status, "Estado" %>
+    <%= form.select :status, [["Citado"], ["Reintentar"], ["Atendido"]], { :include_blank => "Seleccionar estado"}, id: :customer_status, :class => "form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Actualizar Solicitud", :class => "btn btn-primary" %>
+
+    <td><%= link_to 'Agendar Cita', new_meeting_path, :class => "btn btn-primary" %></td>
+
+  </div>
+
+
+
+<% end %>

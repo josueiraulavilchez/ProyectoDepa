@@ -1,0 +1,52 @@
+<%= form_with(model: customer, local: true) do |form| %>
+  <% if customer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(customer.errors.count, "error") %> prohibited this customer from being saved:</h2>
+
+      <ul>
+      <% customer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name, "Nombre Completo" %>
+    <%= form.text_field :name, id: :customer_name, :class => "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :surname, "Apellidos" %>
+    <%= form.text_field :surname, id: :customer_surname, :class => "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dni, "DNI" %>
+    <%= form.text_field :dni, id: :customer_dni, :class => "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mail, "Correo Electrónico" %>
+    <%= form.text_field :mail, id: :customer_mail, :class => "form-control" %>
+  </div>
+
+    <div class="field">
+    <%= form.label :mail, "Confirmar Correo Electrónico" %>
+    <%= form.text_field :mail, id: :customer_mail, :class => "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone, "Teléfono" %>
+    <%= form.text_field :phone, id: :customer_phone, :class => "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :message, "Mensaje" %>
+    <%= form.text_area :message, id: :customer_message, :class => "form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Solicitar Cotización", :class => "btn btn-primary" %>
+  </div>
+<% end %>

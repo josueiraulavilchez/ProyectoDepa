@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @proyect.name %>
+</p>
+
+<p>
+  <strong>District:</strong>
+  <%= @proyect.district %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @proyect.address %>
+</p>
+
+<p>
+  <strong>M2price:</strong>
+  <%= @proyect.m2price %>
+</p>
+
+<%= link_to 'Editar', edit_proyect_path(@proyect) %> |
+<%= link_to 'Regresar', proyects_path %>

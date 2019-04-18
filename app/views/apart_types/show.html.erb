@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @apart_type.name %>
+</p>
+
+<p>
+  <strong>Area:</strong>
+  <%= @apart_type.area %>
+</p>
+
+<p>
+  <strong>Floor:</strong>
+  <%= @apart_type.floor %>
+</p>
+
+<%= link_to 'Edita', edit_apart_type_path(@apart_type) %> |
+<%= link_to 'Regresar', apart_types_path %>

@@ -1,0 +1,47 @@
+<%= form_with(model: meeting, local: true) do |form| %>
+  <% if meeting.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(meeting.errors.count, "error") %> prohibited this meeting from being saved:</h2>
+
+      <ul>
+      <% meeting.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name, "Nombres" %>
+    <%= form.text_field :name, id: :meeting_name, :class => "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :surname, "Apellidos" %>
+    <%= form.text_field :surname, id: :meeting_surname, :class => "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mail, "Correo Ectrónico" %>
+    <%= form.text_field :mail, id: :meeting_mail, :class => "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone, "Teléfono" %>
+    <%= form.text_field :phone, id: :meeting_phone, :class => "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date, "Fecha" %>
+    <%= form.date_select :date, id: :meeting_date, :class => "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :time, "Hora" %>
+    <%= form.time_select :time, id: :meeting_time, :class => "form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Actualizar Cita", :class => "btn btn-primary" %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+class ApartType < ApplicationRecord
+end
